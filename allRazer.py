@@ -174,6 +174,7 @@ def main():
                 theText = inFront[chosenIndexA] + 'FROM ' + inBack[chosenIndexB]
             elif joinChoice == 'OVER':
                 theText = inFront[chosenIndexA] + 'OVER ' + inBack[chosenIndexB]
+                
     
       
 #  Print it    
