@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>RAzer</title>
+    <meta name="description" content="Razer CGI server version">
+    <meta name="author" content="Michael LeBlanc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--IOS7 ICONS-->
+    <link rel="apple-touch-icon" href="img/ios/Icon-Small.png" />
+    <link rel="apple-touch-icon" sizes="80x80" href="img/ios/Icon-40@2x.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/ios/Icon-60@2x.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/ios/Icon-76@2x.png" />
+    <!--IOS ICONS-->
+    <link rel="apple-touch-icon" href="img/ios/Icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/ios/Icon-72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/ios/Icon@2x.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/ios/Icon-72@2x.png" />
+    <link rel="icon" type="image/png" href="img/ios/Icon.png">
+    <style type="text/css">
+    	p { font-family: "helvetica neue", arial, sans-serif; font-weight: 300; line-height: .6em;}
+    	.form { margin-left: 20px; padding-top: 50px; padding-left: 30px; padding-bottom: 20px; border-color: silver; border-style: solid; border-width: 1px; margin-right: 0%;}
+    	p.form { line-height: 1.2em; }
+    	h2 { font-size: 3.4em; font-family: "helvetica neue", arial, sans-serif; margin-bottom: 10px; color: white; position: relative; top: 13px;}
+    	.main { padding: 20px; font-size: .8em; }
+    	h4 { font-family: "helvetica neue", arial, sans-serif; position: relative; left: 51px; top: 75px; font-size: 1.8em; color: silver;
+		}
+    	body { background-image: url("http://lorempixel.com/400/200"); background-size: 100% 60px; background-repeat: no-repeat; position: relative; bottom: 60px; } 
+    </style>
+</head>
+	<body>
+		<div class="main">
+			<h2>RAzer</h2>
+			<h4>Input Form</h4>
+				<div class="form">
+					<form action="/cgi-bin/razer.py" method="post">
+						<!--<p>How many headlines? <input type="text" name="how_many_headlines" size="10"></p>-->
+						<p>How many headlines:
+						<select name="how_many_headlines">
+							<option value="10" selected>10</option>
+							<option value="20">20</option>
+							<option value="30">30</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select></p>
+						<!--<p>Joiner word (in/on/for/of/the/at/to/into/as/from/over)? <input type="text" name="what_joiner_word" size="10" /></p>-->
+						<p>Joiner word for cutup:
+						<select name="what_joiner_word">
+							<option value="in" selected>in</option>
+							<option value="to">to</option>
+							<option value="of">of</option>
+							<option value="on">on</option>
+							<option value="for">for</option>
+							<option value="the">the</option>
+							<option value="at">at</option>
+							<option value="as">as</option>
+							<option value="over">over</option>
+							<option value="from">from</option>
+							<option value="into">into</option>
+						</select></p>
+						<p>Update headlines?<br />(adds 30 sec. delay)<input type="checkbox" name="update_file" value="on"></p>
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
